@@ -1,0 +1,7 @@
+
+function = input("Say something")
+h = 10 ** -12
+
+derivative = (eval(function((5) + h)) - eval(function(5))) / (h)
+
+print(derivative)
