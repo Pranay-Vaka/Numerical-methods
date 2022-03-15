@@ -15,8 +15,5 @@ def newton_raphson_method(function: str, value: float, prev_value: float) -> flo
             "arctan": math.atan,
             "log": math.log
             }
-
-    return prev_value - ((eval(function, {"x": value}.update(math_values))) / ((eval(function, {"x": value + h}.update(math_values)) - eval(function, {"x": value}.update(math_values)) / (h))))
-
-
-newton_raphson_method("2 * x", 2, 1)
+    
+    return prev_value - ((eval(function, math_values, {"x": value})) / ((eval(function, math_values, {"x": value + h})) - eval(function, math_values, {"x": value}) / (h)))

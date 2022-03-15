@@ -14,5 +14,4 @@ def iteration_method(function: str, value: float) -> float:
             "log": math.log
             }
     
-    return eval(function, math_values)
-
+    return eval(function, math_values, {"x": value})
